@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List project</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+  </head>
+
+  <body>
+    <div class="container my-5 mx-auto border border-3 border-secondary p-0">
+      <header
+        class="w-100 bg-primary d-flex align-items-center justify-content-center py-4 text-white position-relative"
+      >
+        <h3 class="main-header w-100 text-center fs-3">My tasks</h3>
+        <button class="add-task text-primary text-center border-0 rounded-circle position-absolute">
+          <i class="fa-solid fa-plus fa-lg"></i>
+        </button>
+      </header>
+
+      <button
+        onclick="deleteAll()"
+        class="delete-all w-100 bg-primary fs-4 fw-semibold border-0 d-flex align-items-center justify-content-center py-4 text-white position-relative d-none"
+      >
+        Delete All
+      </button>
+
+      <article class="bg-secondary p-3">
+        <div class="tasks bg-white"></div>
+      </article>
+    </div>
+
+    <div class="btn-top position-fixed border-3 border border-primary rounded-circle text-primary">
+      <i class="to-top position-absolute fa-solid fa-angle-up fa-2xl"></i>
+    </div>
+
+    <div class="pop-overflow position-fixed w-100 h-100 d-none"></div>
+    <div class="pop-show position-fixed p-3 rounded-4 d-none">
+      <input type="text" placeholder="Enter the name of the new task" class="w-100 border-0 p-1" />
+      <div class="pop-btns mt-3">
+        <button
+          class="cancel text-white rounded-1 px-3 bg-transparent border border-1 border-white"
+          onclick="closePop()"
+        >
+          Cancel
+        </button>
+        <button class="ok border-0 text-white rounded-1 px-3">Ok</button>
+      </div>
+    </div>
+    <script src="js/index.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

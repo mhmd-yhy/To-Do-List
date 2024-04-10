@@ -1,0 +1,114 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: sans-serif;
+  background-color: #294978 !important;
+}
+header,
+.delete-all {
+  height: 40px;
+}
+header button {
+  outline: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  top: 5px;
+  right: 10px;
+}
+.delete-all {
+  margin-top: 0.2%;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.delete-all:hover {
+  background-color: #294978 !important;
+}
+article .tasks {
+  box-shadow: 0px 5px 10px #333;
+}
+article .tasks .task {
+  transition: all 0.3s;
+}
+article .tasks .task:hover {
+  background-color: #294978;
+  color: white;
+}
+
+article .tasks .task .icons span {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+article .tasks .task .icons span:first-child {
+  background-color: #670003;
+}
+article .tasks .task .icons span:nth-child(2) {
+  background-color: #505bcb;
+}
+
+article .tasks .task .icons span:nth-child(3) {
+  background-color: #6a0058;
+}
+article .tasks .task .icons span:nth-child(3).completed {
+  background-color: #018a1f;
+}
+.btn-top {
+  bottom: 40px;
+  right: -40px;
+  width: 40px;
+  height: 40px;
+  z-index: 999;
+  cursor: pointer;
+  transition: 0.6s;
+  animation: toTop 1s linear infinite;
+}
+.to-top {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.btn-top:hover {
+  border: 3px solid #084298 !important;
+  color: #084298 !important;
+}
+@keyframes toTop {
+  0%,
+  100% {
+    bottom: 40px;
+  }
+
+  50% {
+    bottom: +50px;
+  }
+}
+.pop-show {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  background-color: #294978 !important;
+}
+input {
+  outline: none;
+}
+.pop-btns {
+  float: right;
+}
+.pop-btns button {
+  cursor: pointer;
+  background-color: #084298;
+  transition: 0.3s;
+}
+.pop-btns button.ok:hover,
+.pop-btns button.cancel:hover {
+  background-color: #002357 !important;
+}
+.pop-overflow {
+  left: 0;
+  top: 0;
+  background-color: #00000084;
+}
